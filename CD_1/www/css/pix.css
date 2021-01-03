@@ -1,0 +1,18 @@
+<style type="text/css">
+
+table { font-size: 12px; }
+table.pix_1 { height: 170px; width: 140px; text-align: center; vertical-align: middle; }
+table.pix_2 { height: 170px; width: 140px; text-align: center;}
+
+nav.cimke { width: 68px;  margin: 3px 0 0 10px; float:left; clear: both; }
+nav.ertek { width: 120px; margin: 3px 0 0 10px; float:left;  color: #<?php echo SZIN_6; ?>; }
+nav.pix_bal { width: 220px; height: 170px; background-color: #<?php echo SZIN_5; ?>; float: left; margin: 0 0 20px 0;}
+nav.pix_bal_t { margin: 10px 0 0 7px;	}
+nav.pix_jobb {width: 140px; height: 170px; background-color: #<?php echo SZIN_2; ?>; float: left; margin: 0 20px 0 0; text-align: center; }
+nav.pix_jobb_2 {width: 140px; height: 170px; background-color: #<?php echo SZIN_2; ?>; float: left; margin: 0 0 0 0; text-align: center; }
+nav.btn { float: left; height: 30px;  margin: 8px 0 0 10px; }
+nav.ok { float: right; height: 30px;  margin: 3px 10px 0 10px; }
+nav.color { width: 23px; height: 24px; float: left; margin: 4px; }
+nav.color_keret { margin: 7px; }
+
+</style>

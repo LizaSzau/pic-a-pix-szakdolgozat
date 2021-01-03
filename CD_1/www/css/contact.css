@@ -1,0 +1,14 @@
+<style type="text/css">
+
+#i_info_fej { width: 740px; height: 10px; }
+#i_info { width: 740px; background-color: #<?php echo SZIN_2; ?>; }
+#i_info_t { margin: 0 10px 0 10px; line-height: 20px; }
+#i_info_lab { width: 740px; height: 10px; margin-bottom: 20px; }
+
+textarea { width: 390px; height: 200px; }
+form nav.mezo_1 { width: 600px; margin: 20px 0 8px 0; }
+
+.sorol_1 { padding: 0 0 0 10px; width: 136px; float: left; }
+.sorol_2 { margin-left: 9px; }
+
+</style>

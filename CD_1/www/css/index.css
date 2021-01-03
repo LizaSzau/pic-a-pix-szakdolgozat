@@ -1,0 +1,118 @@
+<?php
+
+// *******************************************************************************
+// SZÍNEK
+// *******************************************************************************
+
+define("SZIN_1",  "FFFFFF");    	// fehér
+define("SZIN_2",  "EFE4A3");    	// világos sárga - bal oldal menü
+define("SZIN_3",  "F0C814");		// sárga
+define("SZIN_4",  "F7941E");		// narancssárga
+define("SZIN_5",  "F9F5DB");		// halvány sárga - puzzle blokk bal
+define("SZIN_6",  "D1980E");		// sötét sárga - szöveg
+define("SZIN_7",  "000000");		// fekete
+define("SZIN_8",  "E8D2D7");		// rózsaszín - hiba
+define("SZIN_9",  "ED1846");		// rózsaszín - hibacím
+define("SZIN_10", "CCEEDE");		// halványzöld
+
+?>
+
+<style type="text/css">
+
+/* HTML */
+
+html, body { margin: 0; padding: 0; text-align: center;}
+body { width: 100%; height: 100%; padding: 0; font-family: Arial; letter-spacing: 0px; background: #<?php echo SZIN_1; ?>; font-size: 12px; }
+h1 { text-align: right; color: #<?php echo SZIN_6; ?>; letter-spacing: 2px; font-size: 28px; }
+h2 { color: #<?php echo SZIN_6; ?>; letter-spacing: 1px; font-size: 15px; }
+h3 { color: #<?php echo SZIN_6; ?>; letter-spacing: 1px; font-size: 15px; text-decoration: underline;}
+h2.hiba_cim { color: #<?php echo SZIN_9; ?>; }
+img { border: none; outline: none; }
+ul { padding: 10px 0 0 40px; line-height: 20px;}
+ol { margin-left: 350px; left: 50px; line-height: 20px;}
+
+* {
+	margin:0;
+	padding:0;
+}
+
+#i_keret { position: relative; width: 1000px; margin: auto auto; text-align: left; pmargin-bottom: 20px;}
+#i_logo { width: 1000px; height: 162px; }
+#i_bal { width: 200px; float: left; }
+#i_tartalom_keret { width: 740px; float: left; }
+#i_lablec {clear: both; width: 1000px; height: 133px; background-image: url(images/lablec.gif); }
+#i_tartalom { width: 740px; margin: 25px; float: left; }
+#i_login { position: relative;  padding: 10px 10px 0 14px; text-align: left; font-size: 12px; line-height: 20px; }
+#i_bal_tartalom  { margin-left: 34px; }
+#i_cim { position: absolute; top: 135px;  width: 744px; }
+#i_info { width: 740px; background-color: #<?php echo SZIN_2; ?>; }
+#i_info_t { margin: 0 10px 0 10px; line-height: 20px; }
+#i_info_fej { width: 740px; height: 10px; }
+#i_info_lab { width: 740px; height: 10px; margin-bottom: 20px; }
+#i_ok { width: 740px; background-color: #<?php echo SZIN_10; ?>; }
+#i_hiba { width: 740px; background-color: #<?php echo SZIN_8; ?>; }
+
+/* LINKEK */
+
+a, a:link, a:visited, a:active { color: #<?php echo SZIN_6; ?>; }
+a:hover { color: #<?php echo SZIN_7; ?>; } 
+
+#i_login a, a:link, a:visited, a:active { outline: none; color: #<?php echo SZIN_7; ?>; text-decoration: underline; }
+#i_login a:hover { color: #<?php echo SZIN_6; ?>; } 
+
+.link_oldal:link, .link_oldal:visited, .link_oldal:active { outline: none; color: #<?php echo SZIN_7; ?>; text-decoration: none; }
+.link_oldal:hover { text-decoration: underline; }
+
+/* FORM */
+
+input, textarea { padding: 2px; font-family: Tahoma, Arial; color: #<?php echo SZIN_7; ?>; background-color: #<?php echo SZIN_2; ?>; 
+			  border: 1px solid #<?php echo SZIN_3; ?>;}
+			  
+nav #i_login input {  color: #<?php echo SZIN_6; ?>; background-color: #<?php echo SZIN_5; ?>; border: none; font-size: 12px; width: 138px; margin: 2px 0 2px 0;}
+nav #i_login .radio { width: 14px; padding: 0; background-color: #<?php echo SZIN_2; ?>;}
+nav #i_login .mezo { float: left; width: 22px; margin-top: 15px; }
+nav #i_login .szoveg { margin-top: 15px; float: left; width: 85px; font-size: 11px; }
+nav #i_login .gomb { padding: 6px 4px 0 0px; float: right; width: 30px; height: 27px; }
+nav #i_login .btnimg { width: 30px; height: 27px; border: none; padding: 0; border: none; outline: none;}
+form nav.urlap { float: left; width: 600px; margin: 0; }
+form nav.mezo { width: 600px; margin: 0 0 8px 0; }
+form  span.csillag { min-width: 20px; vertical-align: top;}
+form nav label { display: block; float: left; width: 180px; padding: 3px 6px  0 0; text-align: right; }
+form nav label.kapcsa_l { display: block; float: left; width: 180px; padding: 0px 6px  0 0; top: -3px; position: relative; text-align: right; }
+form nav.kuld { clear: both; margin-left: 195px;}
+form nav.kapcsa{ position: relative; width: 300px; padding: 0; margin: 0; float: left; top: -10px; left: 1px; }
+form input.frm_gomb { border: none; outline: none; padding: 0; margin: 0; }
+span.komment  { font-size: 11px; color: #<?php echo SZIN_6; ?>; }
+nav.komment  { font-size: 11px; color: #<?php echo SZIN_6; ?>; float: left;  padding: 0 0 20px 12px; width: 400px; }
+nav.szoveg { line-height: 20px; letter-spacing: 0px; }
+.radio_2 { margin: 8px 5px 0 0; }
+
+/* EGYÉB */
+
+nav.labmenu { padding: 60px 0 0 50px; width: 900px; text-align: right; }
+nav.apro  { padding: 10px 0 0 50px; font-size: 12px; float: left; }
+nav.apro_jobb { float: right; padding: 33px 50px 0 0; font-size: 12px; color: #ffffff; }
+nav.bel_tart { margin-top: 30px; width: 100%; }
+
+nav.oldalszam { margin-bottom: 20px; clear: both; width: 740px; height: 20px; background-image: url(images/oldal_szam.gif); text-align: center; }
+nav.oldalszam td { height: 20px; padding: 0 2px 0 2px; }
+nav.oldalszam td.oldal_akt { height: 20px; padding: 0 4px 0 4px; background-color: #<?php echo SZIN_7; ?>; color: #<?php echo SZIN_3; ?>; }
+
+.ter { padding: 0 10px 0 10px; }
+.logo_vv { margin: 0 10px 0 0; }
+.menu_fej { width: 166px; height: 27px; }
+.bal_sarga {  width: 166px; background-color: #<?php echo SZIN_2; ?>; padding: 0; margin: 0; clear: both; }
+.bal_sarga_veg { width: 166px; height: 10px; clear: both; }
+.img_blokk {  display:block; }
+.vastag { font-weight: bold; }
+.shape { border: none; outline: none; padding: 0; margin: 0; }
+.sortor { clear: both; padding-top: 40px; }
+.user_nev { font-weight: bold; color: #<?php echo SZIN_6; ?>; font-size: 14px; }
+
+#i_java_no { position: absolute; color: #<?php echo SZIN_1; ?>; width: 100%; height: auto; top: 0;
+             line-height: 30px; border-top: 5px solid #<?php echo SZIN_1; ?>; border-bottom: 5px solid #<?php echo SZIN_1; ?>; padding: 0;
+             opacity: 0.9; filter: alpha(opacity=90); -moz-opacity: 0.9; font-size: 20px; font-weight: bold; text-align: center; }                 
+#i_java_no .no_java_1 {  background-color: #<?php echo SZIN_4; ?>; padding: 33px 0 28px 0; border-bottom: 5px solid #<?php echo SZIN_1; ?>; }   
+#i_java_no .no_java_2 {  background-color: #<?php echo SZIN_3; ?>; padding: 33px 0 28px 0; }   
+
+</style>

@@ -1,0 +1,12 @@
+<style type="text/css">
+
+.link_almenu:link, .link_almenu:visited, .link_almenu:active { outline: none; color: #<?php echo SZIN_7; ?>; text-decoration: underline; }
+.link_almenu:hover { color: #<?php echo SZIN_6; ?>; } 
+
+img.abra { float: left; clear: left; margin: 0 20px 3px 0;}
+img.abra_1{ float: left; clear: left; margin: 0 20px 5px 0;}
+img.abra_2{ float: left;  margin: 20px 20px 5px 0;}
+
+.kiemel { text-decoration: underline; font-weight: bold; }
+
+</style>
