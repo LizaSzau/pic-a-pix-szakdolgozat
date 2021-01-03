@@ -1,0 +1,21 @@
+{
+	"l_1":  { "lang": "Honlap:" },
+	"l_2":  { "lang": "E-mail cím:" },
+	"l_3":  { "lang": "Kapcsolattartó:" },
+	"l_4":  { "lang": "Szauder Ildikó" },
+	"l_5":  { "lang": "ÜZENET ÍRÁSA" },
+	"l_6":  { "lang": "E-mail címed:" },
+	"l_7":  { "lang": "Neved:" },
+	"l_8":  { "lang": "Tárgy:" },
+	"l_9":  { "lang": "Üzenet:" },
+	"l_10": { "lang": "A két szám összege:" },
+	"l_11": { "lang": "Írd be a két szám összegét." },
+	"l_12": { "lang": "Másolat küldése a postafiókodba." },
+	"l_13": { "lang": "Az e-mail cím nem megfelelő." },
+	"l_14": { "lang": "Nem adtad meg a nevedet." },
+	"l_15": { "lang": "Nem adtad meg a tárgyat." },
+	"l_16": { "lang": "Nem írtál üzenetet." },
+	"l_17": { "lang": "A két szám összege hibás." },
+	"l_18": { "lang": "Köszönjük a leveled! Hamarosan válaszolunk rá." },
+	"l_19": { "lang": "HIBA" }
+}

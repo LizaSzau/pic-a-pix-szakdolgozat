@@ -1,0 +1,16 @@
+{
+	"l_1":  { "lang": "Feladó:" },
+	"l_2":  { "lang": "E-mail:" },
+	"l_3":  { "lang": "Tárgy:" },
+	"l_4":  { "lang": "Kedves" },
+	"l_5":  { "lang": "Ezt a levelet azért kaptad, mert az alábbi üzenetet küldted nekünk a honlapunkról:" },
+	"l_6":  { "lang": "Üdvözlettel:" },
+	"l_7":  { "lang": "Köszönjük a regisztrációdat." },
+	"l_8":  { "lang": "A regisztráció befejezéséhez kattints az alábbi linkre:" },
+	"l_9":  { "lang": ">>> REGISZTRÁCIÓ AKTIVÁLÁSA:" },
+	"l_10": { "lang": "(Amennyiben mégsem te regisztráltál, hagyd levelünket figyelmen kívűl.)" },
+	"l_11": { "lang": "Japanese Puzzle - Regisztráció" },
+	"l_12": { "lang": "Kérésedre itt küldjük a jelszavad." },
+	"l_13": { "lang": "Jelszó:" },
+	"l_14": { "lang": "Japanese Puzzle - Jelszó" }
+}

@@ -1,0 +1,16 @@
+{
+	"l_1":  { "lang": "Sender:" },
+	"l_2":  { "lang": "E-mail:" },
+	"l_3":  { "lang": "Subject:" },
+	"l_4":  { "lang": "Dear" },
+	"l_5":  { "lang": "You have sent me this message from our website:" },
+	"l_6":  { "lang": "Best regards:" },
+	"l_7":  { "lang": "Thak you for you registration." },
+	"l_8":  { "lang": "Please, click on the link below to complete your registration:" },
+	"l_9":  { "lang": ">>> CONFIRM YOUR REGISTRATION:" },
+	"l_10": { "lang": "(If you did not sign up to our webpage, please, ignore this e-mail.)" },
+	"l_11": { "lang": "Japanese Puzzle - Registration" },
+	"l_12": { "lang": "To your request, we send your password." },
+	"l_13": { "lang": "Password:" },
+	"l_14": { "lang": "Japanese Puzzle - Password" }
+}

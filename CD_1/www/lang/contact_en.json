@@ -1,0 +1,21 @@
+{
+	"l_1":  { "lang": "Website:" },
+	"l_2":  { "lang": "E-mail address:" },
+	"l_3":  { "lang": "Conatct name:" },
+	"l_4":  { "lang": "Ildiko Szauder" },
+	"l_5":  { "lang": "WRITE A MESSAGE" },
+	"l_6":  { "lang": "Your e-mail address:" },
+	"l_7":  { "lang": "Your name:" },
+	"l_8":  { "lang": "Subject:" },
+	"l_9":  { "lang": "Message:" },
+	"l_10": { "lang": "The sum of the two numbers:" },
+	"l_11": { "lang": "Enter the sum of the two numbers." },
+	"l_12": { "lang": "Send a copy to your mailbox." },
+	"l_13": { "lang": "The e-mail address is not valid." }, 
+	"l_14": { "lang": "Missing name." },
+	"l_15": { "lang": "Missing subject." },
+	"l_16": { "lang": "Missing message." },
+	"l_17": { "lang": "The sum of the two numbers do not match." },
+	"l_18": { "lang": "Thank you for your message! We will answer you soon." },
+	"l_19": { "lang": "ERROR" }
+}

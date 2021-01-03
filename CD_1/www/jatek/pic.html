@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>Japanese Puzzle - Pic a Pix</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<script src="swfobject/swfobject.js" type="text/javascript"></script>
+
+		<script  type="text/javascript">
+			
+			function getFlashMovie(movieName)
+			{
+				var isIE = navigator.appName.indexOf("Microsoft") != -1;
+				return (isIE) ? window[movieName] : document[movieName];
+			}
+			
+			function picID()
+			{	
+				var picpix = window.opener.picpix
+				return picpix
+			}
+
+			function userID()
+			{	
+				var user_id = window.opener.user_id
+				return user_id
+			}
+			
+			function doResize()
+			{
+				//document.getElementById("flash").style.width = document.body.clientWidth; 
+				//document.getElementById("flash").style.height = document.body.clientHeight; 
+			}
+			
+			
+
+
+      window.opener.document.getElementById("teszt").innerHTML = "Testing ";
+
+   
+
+			
+		</script>
+		
+		<style type="text/css">
+			#flash { margin-left: 13px; }
+			html, body { margin: 0; padding: 0; overflow: auto }
+		</style>
+		
+	</head>
+	
+	<body onresize="doResize()">
+		<div id="flash"></div>
+		<script>
+
+			var szel = window.opener.szel
+			var hossz = window.opener.hossz
+			document.getElementById("flash").style.width = szel
+			document.getElementById("flash").style.height = hossz
+			
+			var so = new SWFObject('pic.swf', 'asjs', '100%', '100%', '10.2', '#FFFFFF');
+			so.addParam("quality", "high")
+			so.addParam("salign", "tl")
+			so.write("flash");
+
+		</script>
+	</body>
+</html>

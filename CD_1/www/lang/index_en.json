@@ -1,0 +1,12 @@
+{ 
+	"l_1":  { "lang": "Home page" },
+	"l_2":  { "lang": "Top of the page" },
+	"l_3":  { "lang": "Contact" },
+	"l_4":  { "lang": "MISTACE" },
+	"l_5":  { "lang": "Remember me" },
+	"l_6":  { "lang": "Forum avatar" },
+	"l_7":  { "lang": "Change password" },
+	"l_8":  { "lang": "Delete solved puzzles" },
+	"l_9":  { "lang": "Delete saved puzzles" },
+	"l_10": { "lang": "Logout" }
+}
