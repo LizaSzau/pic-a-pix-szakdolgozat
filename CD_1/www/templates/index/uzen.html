@@ -1,0 +1,63 @@
+{if $uzen_tip == 1}
+
+<nav id="i_info_fej"><img src="images/info_fej.gif"></nav>
+<nav id="i_info">
+	<nav id="i_info_t">
+		
+		<ul>
+		
+        {section name = i loop = $uzen}
+
+			<li>{$uzen[i]}</li>
+			
+        {/section}
+		
+		</ul>
+		
+	</nav>
+</nav>
+<nav id="i_info_lab"><img src="images/info_lab.gif"></nav>
+
+{elseif $uzen_tip == 2}
+
+<nav id="i_info_fej"><img src="images/ok_fej.gif"></nav>
+<nav id="i_ok">
+	<nav id="i_info_t">
+		
+		<ul>
+		
+        {section name = i loop = $uzen}
+
+			<li>{$uzen[i]}</li>
+			
+        {/section}
+		
+		</ul>
+		
+	</nav>
+</nav>
+<nav id="i_info_lab"><img src="images/ok_lab.gif"></nav>
+
+{else}
+
+<nav id="i_info_fej"><img src="images/hiba_fej.gif"></nav>
+<nav id="i_hiba">
+	<nav id="i_info_t">
+	
+		<h2 class="hiba_cim">{$lang_i[4]}</h2>
+		
+		<ul>
+		
+        {section name = i loop = $uzen}
+
+			<li>{$uzen[i]}</li>
+			
+        {/section}
+		
+		</ul>
+		
+	</nav>
+</nav>
+<nav id="i_info_lab"><img src="images/hiba_lab.gif"></nav>
+
+{/if}

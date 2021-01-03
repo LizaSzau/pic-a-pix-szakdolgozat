@@ -1,0 +1,147 @@
+<script  type="text/javascript">
+
+{literal}
+
+function torol(mit)
+{  
+	document.getElementById(mit).value = ""
+}
+
+{/literal}
+
+</script>
+
+{if $user_nev}
+
+	<img src="images/play_{$nyelv}_log.gif" width="200" height="244" class="frm_gomb" usemap="#play">
+
+{else}
+	
+	<img src="images/play_{$nyelv}.gif" width="200" height="298" usemap="#play">
+	
+{/if}
+
+<nav id="i_bal_tartalom">
+	
+	{if $user_id}
+	
+	<nav class="menu_fej"><img src="images/fej_login_{$nyelv}.gif" alt="Bejelentkezés"></nav>
+	
+		<nav class="bal_sarga">
+			<nav id="i_login">
+				
+				<nav class="user_nev">{$user_nev}</nav>
+			
+				<li><a href="?muv=2&akt=avatar">{$lang_i[6]}</a>
+				<li><a href="?muv=2&akt=jelszo">{$lang_i[7]}</a>
+				<li><a href="?muv=1&akt=del_ready">{$lang_i[8]}</a>
+				<li><a href="?muv=1&akt=del_save">{$lang_i[9]}</a>
+				<li><a href="?muv=2&akt=logout">{$lang_i[10]}</a>
+				
+			</nav>
+		<nav class="bal_sarga_veg"><img src="images/lab_sarga.gif" class="img_blokk"></nav>
+		
+	</nav>
+	
+	{else}
+	
+	<nav class="menu_fej"><img src="images/fej_login_{$nyelv}.gif" alt="Bejelentkezés"></nav>
+
+	<nav class="bal_sarga">
+
+		<form method="post" action="?muv=2&amp;akt=login_kuld">
+	
+			<nav id="i_login">
+				<input type="text" name="email" id="email" value="e-mail" maxlength="100" size="10" onClick="torol('email')">
+				<input type="password" name="jelszo" id="jelszo"  value="********" maxlength="12" size="20" onClick="torol('jelszo')">
+				<nav class="mezo"><input type="checkbox" name="auto" value="1" class="radio"></nav>
+				<nav class="szoveg">{$lang_i[5]}</nav>
+				<nav class="gomb"><input type="image" src="images/btn_ok_g.gif" class="btnimg"></nav>
+			</nav>
+			
+		</form>	
+		
+		<nav class="bal_sarga_veg"><img src="images/lab_sarga.gif" class="img_blokk"></nav>
+	</nav>
+	
+	{/if}
+
+{if $nyelv == "hu"}
+
+<p><br>
+<a href="http://www.startlap.hu/" onclick="window.open('http://www.startlap.hu/sajat_linkek/addlink.php?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title));return false;" 
+   title="Add a Startlaphoz"><img alt="Add a Startlaphoz" src="images/bookmark.gif" border="0"/></a>
+
+{/if}
+
+<!--
+
+<p><br>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_donations">
+<input type="hidden" name="business" value="vivid.darer@gmail.com">
+<input type="hidden" name="lc" value="HU">
+<input type="hidden" name="amount" value="5.00">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="hidden" name="bn" value="PP-DonationsBF:btn_don.gif:NonHostedGuest">
+<input type="image" class="frm_gomb" src="images/btn_don.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+-->
+
+<p><br>
+
+{if $nyelv == "hu"}
+	
+	<!--[if IE]>
+	
+	<a onClick="javascript:window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]={$title}&amp;p[summary]={$sum}&amp;p[url]=http://www.japanesepuzzle.besaba.com&amp;&p[images][0]=http://www.japanesepuzzle.besaba.com/images/0.jpg', 'sharer', 'toolbar=0,status=0,width=550,height=400');" target="_parent" href="javascript: void(0)">
+	<img src="images/fb_hu.gif" alt=" Megosztás Facebookon "></a>
+	
+	<![endif]-->
+	
+	<![if !IE]>
+	
+	<a onClick="javascript:window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Te megtalálod az elrejtett képet?&amp;p[summary]=Grafikus logikai rejtvények.&amp;p[url]=http://www.japanesepuzzle.besaba.com&amp;&p[images][0]=http://www.japanesepuzzle.besaba.com/images/0.jpg', 'sharer', 'toolbar=0,status=0,width=550,height=400');" target="_parent" href="javascript: void(0)">
+	<img src="images/fb_hu.gif" alt=" Megosztás Facebookon "></a>
+	
+	<![endif]>
+	
+{else}
+
+	<a href="javascript:window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Can you reveal the hidden picture&amp;p[summary]=Graphical logic puzzles?&amp;p[url]=http://www.japanesepuzzle.besaba.com&amp;&p[images][0]=http://www.japanesepuzzle.besaba.com/images/0.jpg', 'sharer', 'toolbar=0,status=0,width=550,height=400');">
+	<img src="images/fb_en.gif" alt=" Share on Facebookon "></a>
+
+{/if}
+
+<p><br>
+<nav class="fb-like" data-href="http://www.japanesepuzzle.besaba.com" data-send="true" data-layout="button_count" data-width="150" data-show-faces="true" data-font="arial" data-colorscheme="dark"></nav><p><br>
+
+{literal}
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Japanesepuzzle -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:160px;height:600px"
+     data-ad-client="ca-pub-6471664654906258"
+     data-ad-slot="2249174743"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+{/literal}
+
+
+</nav>
+
+<p><br>
+<map name="play">
+	<area shape="rect" coords="34,  25, 198,  63" href="?muv=1" alt="Play Pic-a-Pix" class="shape">
+	<area shape="rect" coords="34,  81, 198, 119" href="?muv=3" class="shape">
+	<area shape="rect" coords="34, 137, 198, 169" href="?muv=5" class="shape">
+	<area shape="rect" coords="34, 193, 198, 225" href="?muv=4" class="shape">
+	<area shape="rect" coords="34, 244, 198, 282" href="?muv=2&akt=reg" class="shape">
+</map>

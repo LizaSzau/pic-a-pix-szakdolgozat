@@ -1,0 +1,87 @@
+{include file = "head.html"}
+
+<body> 
+
+<a name="top">
+
+{literal}
+
+<nav id="fb-root"></nav>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/hu_HU/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+{/literal}
+
+<nav id="i_keret">
+	<nav id="i_logo"><a href="?muv=1"><img src="images/logo.gif" usemap="#logo" title="Pic a Pix puzzle"></a></nav>
+	<nav id="i_bal">{include file = "bal_oldal.html"}</nav>
+	<nav id="i_tartalom_keret">
+		<nav id="i_tartalom">{if $fajl} {include file = $fajl} {/if}</nav>
+	</nav>
+	<nav id="i_lablec">
+		<nav class="labmenu">
+			<a href="?">{$lang_i[1]}</a>
+			<span class="ter">|</span>
+			<a href="#top">{$lang_i[2]}</a>
+			<span class="ter">|</span>
+			<a href="?muv=6">{$lang_i[3]}</a>
+		</nav>
+		<!--
+		<nav class="apro"><a href="http://www.vivid-darer.hu" target="_blank" class="link_feher"><img src="images/logo_vv.gif" class="logo_vv">Design & programming: Vivid Darer</a></nav>
+		<nav class="apro_jobb">© www.japanese-puzzle.com 2015 - All rights reserved.</nav>
+		-->
+ 
+	</nav>
+</nav>
+
+<noscript>
+
+{if $nyelv == 'hu'}
+
+<nav id="i_java_no">
+    <nav class="no_java_1">
+        A JAVASCRIPT NINCS ENGEDÉLYEZVE A BÖNGÉSZŐBEN!
+        <br>
+        Az oldal működéséhez engedélyezni kell a javascriptet:
+    </nav>
+    <nav class="no_java_2">
+        <p><span class="alahuz">MOZILLA FIREFOX:</span> -> Eszközök -> Beállítások -> Tartalom</p>
+        <p><span class="alahuz">CHROM:</span> -> Beállítások -> A motorháztető alatt -> Tartalombeállítások -> JavaScript</p>
+        <p><span class="alahuz">Internet Explorer:</span> -> Eszközök - > Internet beállítások -> Biztonság -> Egyéni szint -> Parancsfájl kezelés -> Active scripting</p>
+	</nav>
+</nav>';
+
+{else}
+
+<nav id="i_java_no">
+    <nav class="no_java_1">
+        THE JAVASCRIPT IS NOT ENABLED IN YOUR BROWSER.
+        <br>
+        You must enable javascript to view this site:
+    </nav>
+    <nav class="no_java_2">
+        <p><span class="alahuz">MOZILLA FIREFOX:</span> -> Tools -> Options -> Content</p>
+        <p><span class="alahuz">CHROM:</span> -> Options -> Under the Hood -> Content Settings -> JavaScript</p>
+        <p><span class="alahuz">Internet Explorer:</span> -> Tools- > Internet Options -> Security -> Costum Level -> Scripting -> Active scripting</p>
+	</nav>
+</nav>';
+
+{/if}
+
+</noscript>
+
+<map name="logo">
+	<area shape="rect" coords="902, 62, 863, 89" href="?nyelv=en" class="shape" title="English">
+	<area shape="rect" coords="954, 62, 915, 89" href="?nyelv=hu" class="shape" title="Hungarian">
+</map>
+
+</body>
+
+</html>
+
+

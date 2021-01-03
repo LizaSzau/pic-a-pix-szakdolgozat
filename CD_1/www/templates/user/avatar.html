@@ -1,0 +1,49 @@
+<nav id="i_cim"><h1>{$lang_m[49]}</h1></nav>
+
+<nav id="i_info_fej"><img src="images/info_fej.gif"></nav>
+<nav id="i_info">
+	<nav id="i_info_t">
+		
+		<h2>{$lang_m[44]}</h2>
+		<ul>
+			<li>{$lang_m[45]}</li>
+			<li>{$lang_m[46]}</li>
+		</ul>
+
+	</nav>
+</nav>
+<nav id="i_info_fej"><img src="images/info_lab.gif"></nav>
+
+<p><br>
+
+{if $uzen} {include file = "uzen.html"} {/if}
+
+<nav class="bel_tart">
+
+	<img src="user/foto/nagy/{$foto}.jpg" class="abra">
+
+	<form method="post" action="?muv={$muv}&amp;akt=avatar_kuld" enctype='multipart/form-data'>
+		<p></br>{$lang_m[48]}
+		<p></br>
+		<input type="file" name="foto" size="60">
+		
+		{if  $foto != 0}
+		
+		<p><br>
+		<input type="checkbox" name="no_foto" value="1" class="radio_2">{$lang_m[47]}
+		
+		{/if}
+		
+		<p><br>
+		<input type="image" src="images/btn_mehet_{$nyelv}.gif" class="frm_gomb">	
+	</form>
+
+</nav>
+
+
+
+
+
+
+
+

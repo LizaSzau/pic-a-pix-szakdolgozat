@@ -1,0 +1,89 @@
+<nav id="i_cim"><h1>{$lang_m[37]}</h1></nav>
+
+{if $uzen} {include file = "uzen.html"} {/if}
+
+{if $log_stat == 2 or $log_stat == 1}
+
+<nav class="szoveg">
+  {$lang_m[31]} <a href="mailto:{$email_jp}" class="under_link">{$email_jp}</a>
+  <br>{$lang_m[32]}
+ </nav>
+ 
+{/if}
+
+{if $log_stat !=  2 and $log_stat != 1}
+
+<h3>{$lang_m[37]}</h3>
+	
+<nav class="bel_tart">
+
+	<form method="post" action="?muv={$muv}&amp;akt=login_kuld">
+	
+		<nav class="urlap" id="frm_log">
+		
+			<nav class="mezo">
+				<label for="email">{$lang_m[1]}</label>
+				<span class="csillag">*</span>
+				<input type="text" name="email" value="{$email}" maxlength="100" size="30">
+			</nav>
+
+			<nav class="mezo">
+				<label for="jelszo">{$lang_m[3]}</label>
+				<span class="csillag">*</span>
+				<input type="password" name="jelszo" maxlength="12" size="30">
+			</nav>
+
+			<nav class="mezo">
+				<label for="auto" class="_lab"></label>
+				<span class="csillag">&nbsp;</span>
+				<input type="checkbox" name="auto" value="1" class="radio_2" {if $auto == 1} checked="checked" {/if}>
+				{$lang_i[5]}
+			</nav>
+				
+			<nav class="kuld">
+				<input type="image" src="images/btn_mehet_{$nyelv}.gif" class="frm_gomb">
+			</nav>	
+		
+		</nav>
+	
+	</form>
+	
+</nav>
+
+<nav class="sortor"></nav>
+
+<h3>{$lang_m[38]}</h3>
+
+<p><br>{$lang_m[42]}
+
+<nav class="bel_tart">
+	
+	<form method="post" action="?muv={$muv}&amp;akt=jelszo_felejt">
+	
+		<nav class="urlap" id="frm_jelszo_felejt">
+		
+			<nav class="mezo">
+				<label for="email">{$lang_m[1]}</label>
+				<span class="csillag">*</span>
+				<input type="text" name="email" value="{$email}" maxlength="100" size="30">
+			</nav>
+				
+			<nav class="kuld">
+				<input type="image" src="images/btn_mehet_{$nyelv}.gif" class="frm_gomb">
+			</nav>	
+		
+		</nav>
+		
+	</form>
+
+</nav>
+
+{/if}
+
+
+
+
+
+
+
+

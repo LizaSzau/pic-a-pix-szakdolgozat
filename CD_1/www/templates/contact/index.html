@@ -1,0 +1,99 @@
+<nav id="i_cim"><h1>{$lec}</h1></nav>
+
+<nav id="i_info_fej"><img src="images/info_fej.gif"></nav>
+
+<nav id="i_info">
+	<nav id="i_info_t">
+
+		<nav class="sorol_1">{$lang_m[1]}</nav>
+		<nav class="vastag"><a href="http://{$domain}">{$domain}</a></nav>
+		<nav class="sorol_1">{$lang_m[2]}</nav>
+		<nav class="vastag">{mailto address = $email_kontakt encode="javascript"}</nav>
+		<!--	
+		<nav class="sorol_1">{$lang_m[3]}</nav>
+		<nav class="vastag">{$lang_m[4]}</nav> 
+		-->
+	
+	</nav>
+</nav>
+
+<nav id="i_info_lab"><img src="images/info_lab.gif"></nav>
+
+{if $uzen} {include file = "uzen.html"} {/if}
+
+{if $uzen_tip != 2}
+
+<h2>{$lang_m[5]}</h2>
+
+<nav class="bel_tart">
+
+	<form method="post" action="?muv={$muv}&akt=uzen_kuld">
+	
+		<nav class="urlap" id="urlap">
+		
+			<nav class="mezo">
+				<label for="email">{$lang_m[6]}</label>
+				<span class="csillag">*</span>
+				<input type="text" name="email" value="{$email}" maxlength="100" size="30">
+			</nav>
+
+			<nav class="mezo">
+				<label for="nev">{$lang_m[7]}</label>
+				<span class="csillag">*</span>
+				<input type="text" name="nev" value="{$nev}" maxlength="50" size="30">
+			</nav>
+
+			<nav class="mezo">
+				<label for="targy">{$lang_m[8]}</label>
+				<span class="csillag">*</span>
+				<input type="text" name="targy" value="{$targy}" class="input_targy" maxlength="100" size="30">
+			</nav>
+			
+			<nav class="mezo">
+				<label for="tartalom">{$lang_m[9]}</label>
+				<span class="csillag">*</span>
+				<textarea name="tartalom" id="tartalom" rows="6" cols="390">{$tartalom}</textarea>
+			</nav>
+
+			<nav class="mezo">
+				<label for="masolat"></label>
+
+				    <input type="checkbox" class="sorol_2" name="masolat" id="masolat" {if $masolat} checked {/if}>
+					{$lang_m[12]}
+			</nav>
+			
+			<nav class="mezo_1">
+				<label for="kapcsa" class="kapcsa_l">{$lang_m[10]}</label>
+				<span class="csillag"></span>
+				<nav class="kapcsa">
+				
+					<table cellpadding="0" cellspacing="0">
+						<tr>
+							<td width="8" class="kapcsa_csillag">*</td>
+							<td><img src="class/captcha_class.php"></td>
+							<td width="30" align="center"> = </td>
+							<td><input type="text" name="kapcsa" maxlength="2" size="10"></td>
+						</tr>
+					</table>
+					
+				</nav>
+			</nav>
+	
+			<nav class="mezo">
+				<label></label>
+				<span class="csillag"></span>
+				<nav class="komment">{$lang_m[11]}</nav>
+			</nav>
+	  
+			<nav class="kuld">
+				<input type="image" src="images/btn_mehet_{$nyelv}.gif" class="frm_gomb">
+			</nav>	 
+		
+		</nav>
+
+	</form>
+	
+</nav>
+
+{/if}
+

@@ -1,0 +1,36 @@
+<nav id="i_cim"><h1>{$lec}</h1></nav>
+
+<nav class="szoveg">	
+
+{if $reg == 1}
+
+  <h2>{$lang_m[29]}</h2>
+  <p><br>
+  {$lang_m[30]}
+  <p><br>
+  {$lang_m[31]} <a href="mailto:{$email}" class="under_link">{$email}</a>
+  <br>{$lang_m[32]}
+
+{/if}
+
+{if $reg == 2}
+
+  <h2>{$lang_m[33]}</h2>
+  <p><br>
+  {$lang_m[34]}
+  <p><br>
+  {$lang_m[31]} <a href="mailto:{$email}" class="under_link">{$email}</a>
+  <br>{$lang_m[32]}
+  
+{/if}
+
+{if $reg == 3}
+
+  <h2>{$lang_m[35]}</h2>
+  <p><br>
+  {$lang_m[31]} <a href="mailto:{$email}" class="under_link">{$email}</a>
+  <br>{$lang_m[32]}
+  
+{/if}
+
+</nav>

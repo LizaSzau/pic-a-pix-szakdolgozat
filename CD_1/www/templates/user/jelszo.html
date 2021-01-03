@@ -1,0 +1,50 @@
+<nav id="i_cim"><h1>{$lang_m[3]}</h1></nav>
+
+<nav id="i_info_fej"><img src="images/info_fej.gif"></nav>
+<nav id="i_info">
+	<nav id="i_info_t">{$lang_m[52]}</nav>
+</nav>
+
+<nav id="i_info_fej"><img src="images/info_lab.gif"></nav>
+
+{if $uzen} <p><br> {include file = "uzen.html"} {/if}
+
+<nav class="bel_tart">
+
+	<form method="post" action="?muv={$muv}&amp;akt=jelszo_kuld">
+	
+		<nav id="frm_log">
+		
+			<nav class="mezo">
+				<label for="jelszo_0">{$lang_m[53]}:</label>
+				<span class="csillag">*</span>
+				<input type="text" name="jelszo_0" maxlength="12" size="30">
+			</nav>
+
+			<nav class="mezo">
+				<label for="jelszo_1">{$lang_m[54]}:</label>
+				<span class="csillag">*</span>
+				<input type="password" name="jelszo_1" maxlength="12" size="30">
+			</nav>
+
+			<nav class="mezo">
+				<label for="jelszo_2">{$lang_m[55]}:</label>
+				<span class="csillag">*</span>
+				<input type="password" name="jelszo_2" maxlength="12" size="30">
+			</nav>
+
+			<nav class="mezo">
+				<label></label>
+				<span class="csillag"></span>
+				<nav class="komment">{$lang_m[7]}</nav>
+			</nav>
+			
+			<nav class="kuld_jelszo">
+				<input type="image" src="images/btn_mehet_{$nyelv}.gif" class="frm_gomb">
+			</nav>	 
+		
+		</nav>
+		
+	</form>
+
+</nav>

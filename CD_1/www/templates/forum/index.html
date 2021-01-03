@@ -1,0 +1,41 @@
+<script src="inc/java.js" type="text/javascript"></script>
+
+<nav id="i_cim"><h1>{$lec}</h1></nav>
+
+{include file = "oldalszam.html"}
+
+{if $user_id > 0}
+
+<h2><a href="javascript: mutat('i_ir')">>> Hozzászólás a fórumhoz</a></h2>
+
+<nav id="i_ir" {if !$hiba} style="display: none;" {/if}>
+
+<form method="post" action="?muv={$muv}&amp;akt=uzen_kuld">
+<p><br>
+<textarea name="uzenet" id="i_uzenet" cols="78" rows="10">{$uzenet}</textarea>
+<p><br>
+<input type="image" src="images/btn_mehet_{$nyelv}.gif" class="frm_gomb">
+<a href="javascript: torol()"><img src="images/btn_cancel_{$nyelv}.gif" class="frm_gomb"></a>
+</form>
+      
+</nav>
+
+<p><br>
+{/if}
+
+<nav  id="i_forum">
+
+{section name = i loop = $tomb}
+
+<nav class="forum_fej"> 
+	<nav class="kep"><img src="user/foto/kicsi/{$tomb[i].foto}.jpg"></nav>
+	<nav class="cim">{$tomb[i].nev}</nav>
+	<nav {if $tomb[i].user_flag == 2} class="datum_adm" {else} class="datum" {/if}>{$tomb[i].datum} &nbsp;&nbsp;&nbsp; <b>#{$tomb[i].id_forum}</b></nav>
+	<nav class="uzenet" id="i_uzenet" name="uzenet">{$tomb[i].uzenet}</nav>
+</nav>
+
+{/section}
+
+</nav>
+
+{include file = "oldalszam.html"}
