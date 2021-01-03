@@ -1,0 +1,57 @@
+<form method="post" action="?muv={$muv}&akt=torol_kuld">
+
+<input type="hidden" name="id" value="{$tomb[0].id}">
+
+<table class="t_lista" cellspacing="0" width="600">
+	<tr>
+		<td colspan="5" class="rajz"><img src="../php/rajzol/rajzol_ready.php?id={$tomb[0].id}"></td>
+	</tr>
+	<tr><td colspan="5"></td></tr>
+	<tr>
+		<td class="szin_5">ID:</td>
+		<td># {$tomb[0].id}</td>
+		<td></td>
+		<td class="szin_5">Dátum:</td>
+		<td>{$tomb[0].datum}</td>
+	</tr>
+	<tr>
+		<td class="szin_5">X méret:</td>
+		<td>{$tomb[0].kocka_x}</td>
+		<td></td>
+		<td class="szin_5">Y méret:</td>
+		<td>{$tomb[0].kocka_y}</td>
+	</tr>
+	<tr>
+		<td class="szin_5">Szélesség:</td>
+		<td>{$tomb[0].szel}</td>
+		<td></td>
+		<td class="szin_5">Magasság:</td>
+		<td>{$tomb[0].hossz}</td>
+	</tr>
+	<tr>
+		<td class="szin_5">Színek:</td>
+		<td>{$tomb[0].color_db} darab</td>
+		<td></td>
+		<td class="szin_5">Nehézség:</td>
+		<td>{$tomb[0].dif}</td>
+	</tr>
+	<tr>
+		<td class="szin_5">Magyar:</td>
+		<td>{$tomb[0].cim_hu}</td>
+		<td></td>
+		<td class="szin_5">Angol:</td>
+		<td>{$tomb[0].cim_en}</td>
+	</tr>
+</table>
+
+<p><br>
+
+<table width="600">
+	<tr height="50">
+		<td colspan="2" class="fontos">Valóban törölni akarod ezt a játékot?</td>
+	</tr>
+	<tr>
+		<td><input type="submit" name="btn_vissza" value=" Vissza " class="gomb"></td>
+		<td align="right"><input type="submit" name="btn_torles" value=" Törlés " class="gomb"></td>
+	</tr>
+</table>

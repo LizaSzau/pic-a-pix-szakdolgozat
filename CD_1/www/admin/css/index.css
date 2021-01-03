@@ -1,0 +1,87 @@
+<?php
+
+// *******************************************************************************
+// SZÍNEK
+// *******************************************************************************
+
+define("SZIN_1",  "FFFFFF");    	// fehér
+define("SZIN_2",  "EFE4A3");    	// világos sárga - bal oldal menü
+define("SZIN_3",  "F0C814");		// sárga
+define("SZIN_4",  "F7941E");		// narancssárga
+define("SZIN_5",  "F9F5DB");		// halvány sárga - puzzle blokk bal
+define("SZIN_6",  "D1980E");		// sötét sárga - szöveg
+define("SZIN_7",  "000000");		// fekete
+define("SZIN_8",  "E8D2D7");		// rózsaszín - hiba
+define("SZIN_9",  "ED1846");		// rózsaszín - hibacím
+define("SZIN_10", "CCEEDE");	// halványzöld
+define("SZIN_11", "008A49");	    // zöld
+define("SZIN_12", "DDDDDD");	    // szürke
+define("SZIN_13", "AAAAAA");	    // szürke
+
+?>
+
+<style type="text/css">
+
+/* HTML */
+
+html, body { margin: 0; }
+body { width: 100%; height: 100%; font-family: Arial; letter-spacing: 0px; background: #<?php echo SZIN_1; ?>; font-size: 12px; }
+table { font-size: 12px; }
+table.t_keret { padding: 10px; }
+table.t_form  td{ padding: 2px; }
+tr.tabla_fej {  background: #<?php echo SZIN_3; ?>; color: #<?php echo SZIN_1; ?>; font-weight: bold; }
+img.img_b{ padding: 0px 2px 0px 10px; }
+
+* {
+	margin:0;
+	padding:0;
+}
+
+#i_keret { height: 100%;  padding: 10px; }
+#i_fejlec { width: auto; height: 40px;  background-color: #<?php echo SZIN_2; ?>; padding: 20px; }
+#i_fejlec_bal { width: auto; float: left; height: 100px; line-height: 20px;}
+#i_fejlec_jobb{ width: auto; float: right; height: 100px; }
+
+
+#i_bal { clear: both; width: 200px; float: left; background-color: #<?php echo SZIN_5; ?>; padding: 10px; }
+#i_tartalom_keret { float: left; padding-left: 20px; }
+#i_lablec {clear: both; width: auto; height: 20px; background-color: green; position: absolute; bottom: 0;} 
+#i_tartalom {  padding: 10px; float: left; }
+
+/* LINKEK */
+
+a, a:link, a:visited, a:active { color: #<?php echo SZIN_11; ?>; }
+a:hover { color: #<?php echo SZIN_7; ?>; } 
+
+/* FORM */
+
+input, textarea { padding: 2px; font-family: Tahoma, Arial; color: #<?php echo SZIN_7; ?>; background-color: #<?php echo SZIN_5; ?>; 
+			  border: 1px solid #<?php echo SZIN_3; ?>;}
+input.gomb { background-color: #<?php echo SZIN_2; ?>; }
+
+/* EGYÉB */
+
+.cim_1 { color: #<?php echo SZIN_7; ?>; letter-spacing: 3px; font-size: 36px; font-weight: bold; }
+.cim_2 { color: #<?php echo SZIN_6; ?>; letter-spacing: 2px; font-size: 22px; font-weight: bold; padding-right: 20px; }
+.szov_1 { color: #<?php echo SZIN_7; ?>; }
+.menu_csik { border-right: 1px solid #<?php echo SZIN_4; ?>; }
+.menu { line-height: 20px;; ?>; }
+.szin_1 { background-color: #<?php echo SZIN_1; ?>; }
+.szin_4 { background-color: #<?php echo SZIN_4; ?>; }
+.szin_5 { background-color: #<?php echo SZIN_5; ?>; }
+.szin_2 { background-color: #<?php echo SZIN_2; ?>; }
+.szin_8 { background-color: #<?php echo SZIN_8; ?>; }
+.szin_9 { background-color: #<?php echo SZIN_9; ?>; }
+.szin_10 { background-color: #<?php echo SZIN_10; ?>; }
+.szin_11 { background-color: #<?php echo SZIN_11; ?>; }
+.szin_12 { background-color: #<?php echo SZIN_12; ?>; }
+.szin_13 { background-color: #<?php echo SZIN_13; ?>; }
+.bordo { color: #<?php echo SZIN_9; ?>; }
+.lec {  font-weight: bold; font-size: 16px; }
+.vastag { font-weight: bold; }
+.sortor { clear: both; padding-top: 40px; }
+.feher { color: #<?php echo SZIN_1; ?>; }
+.login { padding-left: 10px; line-height: 20px; }
+.kiemel { color: #<?php echo SZIN_11; ?>; font-weight: bold; font-size: 14px;}
+ 
+</style>

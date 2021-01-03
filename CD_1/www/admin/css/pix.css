@@ -1,0 +1,26 @@
+<style type="text/css">
+
+input, textarea { background-color: #<?php echo SZIN_1; ?>; }
+input.rovid { width: 40px; }
+input.gomb { width: 70px; }
+
+.nagy_link:link, .nagy_link:visited, .nagy_link:active { font-size: 15px; outline: none; color: #<?php echo SZIN_11; ?>; text-decoration: underline; font-weight: bold; }
+.nagy_link:hover { color: #<?php echo SZIN_7; ?>; } 
+
+table.t_lista  td { padding: 5px 5px 5px 20px; line-height: 16px;  }
+table.t_form_1  td { padding: 10px 0 0 0; }
+table.t_form_mod  td { padding: 10px 10px 0 0; >}
+td.rajz { background-color: #<?php echo SZIN_2; ?>; text-align: center; }
+td.text { background-color: #<?php echo SZIN_5; ?>; text-align: center; }
+
+nav.cimke { width: 68px;  margin: 3px 0 0 0; float:left; clear: both; }
+nav.ertek { width: 120px; margin: 3px 0 0 0; float:left;  color: #<?php echo SZIN_6; ?>; }
+
+nav.cimke_mod{ width: 68px;  margin: 16px 0 0 0; float:left; clear: both; }
+nav.ertek_mod{ width: 120px; margin: 10px 0 6px 0; float:left;  color: #<?php echo SZIN_6; ?>; }
+
+
+.sor_on { background-color: #<?php echo SZIN_10; ?>; }
+.fontos { color: #<?php echo SZIN_9; ?>; font-weight: bold; text-align: center; }
+
+</style>

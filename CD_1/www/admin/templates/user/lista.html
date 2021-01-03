@@ -1,0 +1,111 @@
+<form method="post" action="?muv={$muv}&akt=lista&mod=keres">
+<input type="hidden" name="mod" value="keres">
+
+<table class="t_form">
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td class="kiemel" width="80">KERESÉS: </td>
+					<td>&nbsp;</td>
+					<td> Hol:</td>
+					<td>
+						<select name="hol">
+							<option value="id">ID</option>
+							<option value="flag" {if $hol == "flag"} selected {/if}>Státusz</option>
+							<option value="email" {if $hol == "email"} selected {/if}>E-mail cím</option>
+							<option value="nev" {if $hol == "nev"} selected {/if}>Név</option>
+							<option value="ip" {if $hol == "ip"} selected {/if}>IP cím</option>
+						</select>
+					</td>
+					<td>&nbsp;</td>
+					<td align="right"> Mit: </td>
+					<td><input type="text" name="mit" size="20" value="{$mit}"></td>
+					<td align="right"><input type="submit" value=" Mehet " class="gomb"></td>
+				</tr>
+			</table>
+
+		</td>
+	</tr>
+</table>
+
+</form>
+
+<p><br>
+
+<table width="900" cellpadding="0" cellspacing="0" class="t_lista">
+
+	<tr class="tabla_fej">
+		<td style="min-width:50px">
+			ID
+			<a href="?muv={$muv}&akt=lista&order=11"><img src="images/nyil_fel{if $order == 11}_a{/if}.gif" title=" ID szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&akt=lista&order=12"><img src="images/nyil_le{if $order == 12}_a{/if}.gif" title=" ID szerint csökkenő "></a>   
+		</td>
+		<td style="min-width:100px">
+			STÁTUSZ
+			<a href="?muv={$muv}&akt=lista&order=21"><img src="images/nyil_fel{if $order == 21}_a{/if}.gif" title=" Státusz szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&akt=lista&order=22"><img src="images/nyil_le{if $order == 22}_a{/if}.gif" title=" Státusz szerint csökkenő "></a>  
+		</td>
+		<td style="min-width:200px">
+			E-MAIL
+			<a href="?muv={$muv}&akt=lista&order=31"><img src="images/nyil_fel{if $order == 31}_a{/if}.gif" title=" E-mail szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&akt=lista&order=32"><img src="images/nyil_le{if $order == 32}_a{/if}.gif" title=" E-mail szerint csökkenő "></a>  
+		</td>
+		<td style="min-width:150px">
+			NÉV
+			<a href="?muv={$muv}&akt=lista&order=41"><img src="images/nyil_fel{if $order == 41}_a{/if}.gif" title=" Név szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&akt=lista&order=42"><img src="images/nyil_le{if $order == 42}_a{/if}.gif" title=" Név szerint csökkenő "></a>  
+		</td>
+		<td style="min-width:80px">
+			IP
+			<a href="?muv={$muv}&akt=lista&order=51"><img src="images/nyil_fel{if $order == 51}_a{/if}.gif" title=" IP szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&akt=lista&order=52"><img src="images/nyil_le{if $order == 52}_a{/if}.gif" title=" IP szerint csökkenő "></a>  
+		</td>
+		<td style="min-width:100px">
+			BELÉPETT
+			<a href="?muv={$muv}&akt=lista&order=61"><img src="images/nyil_fel{if $order == 61}_a{/if}.gif" title=" Belépés szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&akt=lista&order=62"><img src="images/nyil_le{if $order == 62}_a{/if}.gif" title=" Belépés szerint csökkenő "></a>  
+		</td>
+		<td style="min-width:130px">
+			REGISZTRÁLT
+			<a href="?muv={$muv}&akt=lista&order=71"><img src="images/nyil_fel{if $order == 71}_a{/if}.gif" title=" Regisztráció szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&akt=lista&order=72"><img src="images/nyil_le{if $order == 72}_a{/if}.gif" title=" Regisztráció szerint csökkenő "></a>  
+		</td>
+		<td></td>
+	</tr>
+
+    <tbody class="mutat">
+	
+	{section name = i loop = $tomb}
+  
+        {if $tomb[i].sor == 1}
+        
+    <tr class="szin_1" onmouseover="this.className='sor_on';" onmouseout="this.className='szin_1';">
+        
+        {else}
+        
+    <tr class="szin_12" onmouseover="this.className='sor_on';" onmouseout="this.className='szin_12';">
+        
+        {/if}
+
+		<td {if $tomb[i].flag == 3} class="bordo" {/if}>{$tomb[i].id}</td>
+		<td {if $tomb[i].flag == 3} class="bordo" {/if}>{$tomb[i].flag_n}</td>
+		<td {if $tomb[i].flag == 3} class="bordo" {/if}>{$tomb[i].email}</td>
+		<td {if $tomb[i].flag == 3} class="bordo" {/if}>{$tomb[i].nev}</td>
+		<td {if $tomb[i].flag == 3} class="bordo" {/if}>{$tomb[i].ip}</td>
+		<td {if $tomb[i].flag == 3} class="bordo" {/if}>{$tomb[i].dat_belep}</td>
+		<td {if $tomb[i].flag == 3} class="bordo" {/if}>{$tomb[i].dat_reg}</td>
+		<td>
+			{if $tomb[i].flag == 1 } 
+				<a href="?muv={$muv}&akt=flag_tilt&id={$tomb[i].id}"><img src="images/flag_ok.gif" title=" Letiltás "></a>
+			{elseif $tomb[i].flag ==  3} 
+				<a href="?muv={$muv}&akt=flag_enged&id={$tomb[i].id}"><img src="images/flag_no.gif" title=" Letiltás feloldása "></a>
+			{else} 
+				<img src="images/flag.gif">
+			{/if}
+		</td>
+	</tr>
+
+	{/section}
+
+</table>

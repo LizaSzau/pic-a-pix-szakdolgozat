@@ -1,0 +1,77 @@
+{include file = "head.html"}
+
+<body> 
+
+<table width="100%" class="t_keret" height="100%">
+  <tr>
+    <td>
+
+<table width="100%" height="100%" cellpadding="0" cellspacing="0">
+  <tr height="4"><td></td></tr>
+  <tr height="60" class="szin_2">
+    <td>
+      <table cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+          <td class="login">
+
+            {if $user_nev} Bejelentkezve:  {$user_nev}
+
+            <br><img src="images/nyil.gif"><a href="index.php?muv=1&akt=logout">kijelentkezés</a> {/if}
+          </td>
+          <td align="right"><span class="cim_1">Japanese Puzzle</span><span class="cim_2"> - admin felület</span></td>
+        </tr>
+      </table>
+
+
+    </td>
+  </tr>
+  <tr height="4"><td></td></tr>
+  <tr height="4"><td></td></tr>
+  <tr>
+    <td valign="top">
+
+      <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td width="170" class="szin_5" valign="top">
+
+            <table cellpadding="10" cellspacing="0">
+              <tr>
+                <td>
+
+<!-- MENÜ-->
+                {include file = "bal_oldal.html" }
+
+<!-- MENÜ VÉGE -->
+
+                </td>
+              </tr>
+            </table>
+
+          </td>
+          
+          <td width="10">&nbsp;</td>
+          <td align="center" valign="top">
+
+<!-- TARTALOM -->
+
+		{include file = "fejlec.html"}
+        {if $fajl} {include file = $fajl} {/if}
+
+<!-- TARTALOM vége -->
+
+          </td>
+        </tr>
+      </table>
+
+    </td>
+  </tr>
+  <tr height="4"><td></td></tr>
+  <tr height="4"><td></td></tr>
+  <tr height="8"><td class="szin_2"></td>
+</table>
+
+    </td>
+  </tr>
+</table>
+</body>
+</html>

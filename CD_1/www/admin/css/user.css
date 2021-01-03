@@ -1,0 +1,8 @@
+<style type="text/css">
+
+table.t_lista  td { padding: 5px 20px 5px 20px; margin: 0; }
+/* tbody.mutat { cursor: pointer; } */
+
+.sor_on { background-color: #<?php echo SZIN_10; ?>; }
+
+</style>

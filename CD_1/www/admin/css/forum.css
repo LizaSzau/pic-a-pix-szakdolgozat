@@ -1,0 +1,11 @@
+<style type="text/css">
+
+table.t_lista  td { padding: 5px 20px 5px 20px;  }
+
+td.cim_jobb { text-align: right; width: 150px; background: #<?php echo SZIN_12; ?>;}
+td.cim_bal{ background: #<?php echo SZIN_2; ?>; color: #<?php echo SZIN_6; ?>; }
+.kiemel { color: #<?php echo SZIN_11; ?>; font-weight: bold; font-size: 14px;}
+
+.sor_on { background-color: #<?php echo SZIN_10; ?>; }
+
+</style>

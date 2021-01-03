@@ -1,0 +1,117 @@
+<form method="post" action="?muv={$muv}&akt=lista&mod=keres">
+<input type="hidden" name="mod" value="keres">
+
+<table class="t_form">
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td class="kiemel" width="80">KERESÉS: </td>
+					<td>&nbsp;</td>
+					<td> Hol:</td>
+					<td>
+						<select name="hol" id="hol" onchange="flag_keres()">
+							<option value="b.id">ID user</option>
+							<option value="a.id" {if $hol == "a.id"} selected {/if}>ID fórum</option>
+							<option value="nev" {if $hol == "nev"} selected {/if}>Felhasználó neve</option>
+							<option value="a.flag" {if $hol == "a.flag"} selected {/if}>Letiltott</option>
+							<option value="uzenet" {if $hol == "uzenet"} selected {/if}>Szövegben keresés</option>
+						</select>
+					</td>
+					<td>&nbsp;</td>
+					<td align="right" id="mit_2"> Mit: </td>
+					<td name="mit_tr"><input type="text" name="mit" size="20" value="{$mit}" id="mit_1"></td>
+					<td align="right"><input type="submit" value=" Mehet " class="gomb"></td>
+				</tr>
+			</table>
+
+		</td>
+	</tr>
+</table>
+
+</form>
+
+<p><br>
+
+<!-- {include file = "oldalszam.html"} -->
+
+<table width="780" cellpadding="0" cellspacing="0" class="t_lista" >
+	<tr class="tabla_fej">
+		<td style="width:150px">
+			ID FELHASZNÁLÓ
+			<a href="?muv={$muv}&order=11"><img src="images/nyil_fel{if $order == 11}_a{/if}.gif" title=" ID felhasználó szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&order=12"><img src="images/nyil_le{if $order == 12}_a{/if}.gif" title=" ID felhasználó szerint csökkenő "></a>   
+		</td>
+		<td style="xmin-width:100px">
+			NÉV
+			<a href="?muv={$muv}&order=21"><img src="images/nyil_fel{if $order == 21}_a{/if}.gif" title=" Név növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&order=22"><img src="images/nyil_le{if $order == 22}_a{/if}.gif" title=" Név szerint csökkenő "></a>  
+		</td>
+		<td style="xmin-width:150px">
+			ID FÓRUM
+			<a href="?muv={$muv}&order=31"><img src="images/nyil_fel{if $order == 31}_a{/if}.gif" title=" ID fórum szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&order=32"><img src="images/nyil_le{if $order == 32}_a{/if}.gif" title=" ID fórum szerint csökkenő "></a>  
+		</td>
+		<td style="xmin-width:200px">
+			DÁTUM
+			<a href="?muv={$muv}&order=41"><img src="images/nyil_fel{if $order == 41}_a{/if}.gif" title=" Dátum szerint növekvő " class="img_b"></a>
+			<a href="?muv={$muv}&order=42"><img src="images/nyil_le{if $order == 42}_a{/if}.gif" title=" Dátum szerint csökkenő "></a>  
+		</td>
+		<td style="width:120px">
+			MODERÁLÁS
+			<a href="?muv={$muv}&order=51"><img src="images/nyil_fel{if $order == 51}_a{/if}.gif" title=" Letiltottak elől " class="img_b"></a>
+			<a href="?muv={$muv}&order=52"><img src="images/nyil_le{if $order == 52}_a{/if}.gif" title=" Letiltottak hátul "></a>  
+		</td>
+	</tr>
+	<tr>
+</table>
+		
+			{section name = i loop = $tomb}
+
+			<table width="780" cellpadding="0" cellspacing="0" class="t_lista" >
+				<tr>
+					<td class="cim_bal">#{$tomb[i].id_user} {$tomb[i].nev}</td>
+					<td class="cim_jobb"><b>#{$tomb[i].id_forum}</b> &nbsp;&nbsp;&nbsp; {$tomb[i].datum}</b></td>
+					<td class="szin_12" width="20">
+					
+						{if $tomb[i].forum_flag == 1} 
+							<a href="?muv={$muv}&akt=flag_tilt&id={$tomb[i].id_forum}&nyelv={$nyelv}"><img src="images/flag_ok.gif" title=" Letiltás "></a>
+						{else} 
+							<a href="?muv={$muv}&akt=flag_enged&id={$tomb[i].id_forum}&nyelv={$nyelv}"><img src="images/flag_no.gif" title=" Letiltás feloldása "></a>
+						{/if}
+						
+					</td>
+
+					<!--<td {if $tomb[i].user_flag == 2} class="datum_adm" {else} class="datum" {/if}</td>-->
+				</tr>
+				<tr>
+					<td colspan="3" class="szin_5" onmouseover="this.className='sor_on';" onmouseout="this.className='szin_5';">{$tomb[i].uzenet}</td>
+				</tr>
+				<tr><td colspan="3">&nbsp;</td></tr>
+			</table>
+
+			{/section}
+
+<!-- {include file = "oldalszam.html"} -->
+
+<script type="text/javascript">
+
+flag_keres();
+
+function flag_keres()
+{
+	var x = document.getElementById("hol").value;
+
+	if (x == "a.flag")
+	{
+		document.getElementById("mit_1").style.display = 'none';
+		document.getElementById("mit_2").style.display = 'none';
+	}
+	else
+	{
+		document.getElementById("mit_1").style.display = 'block';
+		document.getElementById("mit_2").style.display = 'block';
+	}
+}
+
+</script>

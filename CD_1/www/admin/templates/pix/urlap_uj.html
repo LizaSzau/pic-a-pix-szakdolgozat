@@ -1,0 +1,55 @@
+<form method="post" action="?muv={$muv}&akt=uj_kuld">
+
+<table class="t_lista" cellspacing="0" width="600">
+	<tr><td colspan="5"></td></tr>
+	<tr>
+		<td class="szin_5">X méret:</td>
+		<td><input type="text" name="kocka_x" value="{$tomb[0].kocka_x}" class="rovid" maxlength="2"></td>
+		<td></td>
+		<td class="szin_5">Y méret:</td>
+		<td><input type="text" name="kocka_y" value="{$tomb[0].kocka_y}" class="rovid" maxlength="2"></td>
+	</tr>
+	<tr>
+		<td class="szin_5">Szélesség:</td>
+		<td><input type="text" name="szel" value="{$tomb[0].szel}" class="rovid" maxlength="4"></td>
+		<td></td>
+		<td class="szin_5">Magasság:</td>
+		<td><input type="text" name="hossz" value="{$tomb[0].hossz}" class="rovid" maxlength="4"></td>
+	</tr>
+	<tr>
+		<td class="szin_5">Nehézség:</td>
+		<td><input type="text" name="dif" value="{$tomb[0].dif}" class="rovid" maxlength="1"></td>
+		<td></td>
+		<td class="szin_5"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td class="szin_5">Magyar:</td>
+		<td><input type="text" name="cim_hu" value="{$tomb[0].cim_hu}"></td>
+		<td></td>
+		<td class="szin_5">Angol:</td>
+		<td><input type="text" name="cim_en" value="{$tomb[0].cim_en}"></td>
+	</tr>
+</table>
+
+<p><br>
+
+<table  width="600">
+	<tr height="360">
+		<td colspan="5" class="text"><textarea name="pix" rows="20" cols="75">{$tomb[0].pix}</textarea></td>
+	</tr>
+	<tr height="20"><td colspan="2"></td></tr>
+	<tr>
+		<td><input type="submit" name="btn_vissza" value=" Vissza " class="gomb"></td>
+		<td align="right"><input type="submit" name="btn_mentes" value=" Mentés " class="gomb"></td>
+	</tr>
+</table>
+
+<p></br>
+
+<table width="600">
+	<tr height="30"><td>&nbsp;</td></tr>
+	<tr><td><a href="templates/pix/rajzol.html" target="_blank" class="nagy_link">Rajzoló program megjelenítése</a></td></tr>
+</table>
+
+

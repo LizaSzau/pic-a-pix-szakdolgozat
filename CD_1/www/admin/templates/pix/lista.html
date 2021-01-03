@@ -1,0 +1,85 @@
+<form method="post" action="?muv={$muv}&mod=keres">
+<input type="hidden" name="mod" value="keres">
+
+<table class="t_form">
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td class="kiemel" width="80">KERESÉS: </td>
+					<td>&nbsp;</td>
+					<td> Hol:</td>
+					<td>
+						<select name="hol">
+							<option value="a.id">ID</option>
+							<option value="cim_hu" {if $hol == "cim_hu"} selected {/if}>Magyar</option>
+							<option value="cim_en" {if $hol == "cim_en"} selected {/if}>Angol</option>
+							<option value="datum" {if $hol == "datum"} selected {/if}>Dátum</option>
+						</select>
+					</td>
+					<td>&nbsp;</td>
+					<td align="right"> Mit: </td>
+					<td><input type="text" name="mit" size="20" value="{$mit}"></td>
+					<td align="right"><input type="submit" value=" Mehet " class="gomb"></td>
+				</tr>
+			</table>
+
+		</td>
+	</tr>
+</table>
+
+</form>
+
+<p><br>
+
+<table class="t_lista">
+
+	{section name=i loop=$tomb}
+	
+		{if $tomb[i].sor == 1}<tr>{/if}
+	
+			<td>
+		
+				<table height="200">
+					<tr>
+						<td width="250" class="szin_5" onmouseover="this.className='sor_on';" onmouseout="this.className='szin_5';">
+						
+							<nav class="keret">
+								<nav class="cimke">ID:</nav><nav class="ertek"># {$tomb[i].id_pic}</nav>
+								<nav class="cimke">Méret:</nav><nav class="ertek">{$tomb[i].kocka_x} x {$tomb[i].kocka_y}</nav>
+								<nav class="cimke">Széles:</nav><nav class="ertek">{$tomb[i].szel}</nav>
+								<nav class="cimke">Magas:</nav><nav class="ertek">{$tomb[i].hossz}</nav>
+								<nav class="cimke">Színek:</nav><nav class="ertek">{$tomb[i].color_db}</nav>
+								<nav class="cimke">Dátum:</nav><nav class="ertek">{$tomb[i].datum}</nav>
+								<nav class="cimke">Magyar:</nav><nav class="ertek">{$tomb[i].cim_hu}</nav>
+								<nav class="cimke">Angol:</nav><nav class="ertek">{$tomb[i].cim_en}</nav>
+								<nav class="cimke">Nehézség:</nav><nav class="ertek">{$tomb[i].dif}</nav>
+									
+								<table cellpadding="0" cellspacing="0" class="t_form_1">									
+									<tr>
+										<td>
+											<form method="post" action="?muv={$muv}&akt=modosit">
+												<input type="hidden" name="id" value="{$tomb[i].id_pic}">
+												<input type="submit" value=" Módosít " class="gomb">
+											</form>
+										</td>
+										<td width="160" align="right">
+											<form method="post" action="?muv={$muv}&akt=torol">
+												<input type="hidden" name="id" value="{$tomb[i].id_pic}">
+												<input type="submit" value=" Töröl " class="gomb">
+											</form>
+										</td>
+									</tr>
+								</table>
+							
+						<td width="140" class="szin_2" align="center"><img src="../php/rajzol/rajzol_ready.php?id={$tomb[i].id_pic}"></td>
+					</tr>
+				</table>
+				
+			</td>
+	
+		{if $tomb[i].sor != 1}</tr>{/if}
+	
+	{/section}
+	
+</table>

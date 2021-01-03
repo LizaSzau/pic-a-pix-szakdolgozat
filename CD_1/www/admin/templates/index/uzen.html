@@ -1,0 +1,93 @@
+{if $uzen_tip == 1}
+
+	<table width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+    
+				<table cellpadding="4" width="100%">
+					<tr>
+						<td>
+
+							<table width="100%" cellpadding="0" cellspacing="0">
+
+							{section name = i loop = $uzen}
+
+								<tr><td colspan="2">{$uzen[i]}</td></tr>
+              
+							{/section}
+
+							</table>
+
+						</td>
+					</tr>
+				</table>
+			
+			</td>
+		</tr>
+	</table>
+	
+{elseif $uzen_tip == 2}	
+    
+	<table width="100%" cellpadding="0" cellspacing="5" class="szin_10">
+		<tr>
+			<td>
+			
+				<table cellspacing="10" width="100%" class="szin_11">
+					<tr>
+						<td>
+
+							<table width="100%" cellpadding="0" cellspacing="0" class="feher">
+
+							{section name = i loop = $uzen}
+              
+								<tr>
+									<td width="15" valign="top"><img src="images/kocka_2.gif"></td>
+									<td>{$uzen[i]}</td>
+								</tr>
+              
+							{/section}
+
+							</table>
+
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+	</table>
+	
+{else}
+
+	<table width="100%" cellpadding="0" cellspacing="5" class="szin_8">
+		<tr>
+			<td>
+    
+				<table cellspacing="10" width="100%"  class="szin_9">
+					<tr>
+						<td>
+
+							<table width="100%" cellpadding="0" cellspacing="0" class="feher">
+								<tr><td colspan="2" class="vastag">HIBA</td></tr>
+								<tr><td colspan="2"></td></tr>
+				
+								{section name = i loop = $uzen}
+				
+								<tr>
+									<td width="15" valign="top"><img src="images/kocka_2.gif"></td>
+									<td>{$uzen[i]}</td>
+								</tr>
+				  
+								{/section}
+
+							</table>
+
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+	</table>
+	
+{/if}

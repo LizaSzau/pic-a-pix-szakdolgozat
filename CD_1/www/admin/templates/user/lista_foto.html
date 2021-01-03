@@ -1,0 +1,66 @@
+<form method="post" action="?muv={$muv}&akt=lista_foto&mod=keres">
+<input type="hidden" name="mod" value="keres">
+
+<table class="t_form">
+	<tr>
+		<td>
+			<table>
+				<tr>
+					<td class="kiemel" width="80">KERESÉS: </td>
+					<td>&nbsp;</td>
+					<td> Hol:</td>
+					<td>
+						<select name="hol">
+							<option value="id">ID</option>
+							<option value="email" {if $hol == "email"} selected {/if}>E-mail cím</option>
+							<option value="nev" {if $hol == "nev"} selected {/if}>Név</option>
+						</select>
+					</td>
+					<td>&nbsp;</td>
+					<td align="right"> Mit: </td>
+					<td><input type="text" name="mit" size="20" value="{$mit}"></td>
+					<td align="right"><input type="submit" value=" Mehet " class="gomb"></td>
+				</tr>
+			</table>
+
+		</td>
+	</tr>
+</table>
+
+</form>
+
+<p><br>
+
+<table width="" cellpadding="0" cellspacing="0" class="t_lista">
+    <tbody class="mutat">
+	
+	{section name = i loop = $tomb}
+
+		{if $tomb[i].sor == 1}<tr>{/if}
+		
+		<td>
+		
+			<table class="szin_12" onmouseover="this.className='sor_on';" onmouseout="this.className='szin_12';">
+				<tr>
+					<td width="200">ID: {$tomb[i].id}</td>
+					<td rowspan="4" width="200"><img src="../user/foto/nagy/{$tomb[i].id}.jpg"></td>
+				</tr>
+				<tr><td>{$tomb[i].email}</td></tr>
+				<tr><td>{$tomb[i].nev}</td></tr>
+				<tr>
+					<td>
+						<form method="post" action="?muv={$muv}&akt=foto_torol">
+							<input type="hidden" name="id" value="{$tomb[i].id}">
+							<input type="submit" value=" Fénykép törlése " class="gomb">
+						</form>
+					</td>
+				</tr>
+			</table>
+			
+		</td>
+		
+		{if $tomb[i].sor != 1}</tr>{/if}
+		
+	{/section}
+
+</table>

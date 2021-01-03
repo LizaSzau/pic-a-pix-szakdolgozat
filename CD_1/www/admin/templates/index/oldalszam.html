@@ -1,0 +1,37 @@
+{if $oldal_db > 1}
+
+<nav class="oldalszam">
+
+	<center>
+
+		<table cellpadding="0" cellspacing="0">
+			<tr>
+				
+				<td><a href="?muv={$muv}&amp;akt={$akt}&amp;oldal_akt={$oldal_akt-1}{$link}"><img src="images/nyil_b.gif"></a></td>
+				
+				{section name = i loop = $oldal_db}
+					
+						{if $oldal_akt != $oldal_db[i]}					
+						
+							<td><a href="?muv={$muv}&amp;akt={$akt}&amp;oldal_akt={$oldal_db[i]}{$link}" class="link_oldal">{$oldal_db[i]}</a></td>
+							<td></td>
+							
+						{else}
+						
+							<td class="oldal_akt">{$oldal_db[i]}</td>
+							<td></td>
+							
+						{/if}
+						
+				{/section}
+					
+					<td><a href="?muv={$muv}&amp;akt={$akt}&amp;oldal_akt={$oldal_akt+1}{$link}"><img src="images/nyil_j.gif"></a></td>
+
+			</tr>
+		</table>
+    
+	</center>
+
+</nav>
+
+{/if}
